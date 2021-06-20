@@ -1,0 +1,80 @@
+.navbar{
+  display: flex;
+  padding: 1rem 8rem;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+
+  &__logo{
+    width: 43.5%;
+  }
+
+  &__group{
+    display: flex;
+    justify-content: space-evenly; 
+    align-items: center;   
+    width: 30%;
+  }
+
+  &__item {
+    color: $color-primary;
+    margin-right: 2rem;
+    font-weight: bold;
+    transition: all .3s ease;
+    position: relative;
+
+    &:hover{
+      color: $color-secondary;
+    }
+  
+    &::after{
+      content: "";
+      height: 3px;
+      width: 0;
+      background: $color-secondary;
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      transition: all .3s ease-in;
+    }  
+
+    &:hover::after{
+      width: 100%;
+    }
+  }
+  
+  & .active{
+    position: relative;
+  }
+
+  & .active::after {
+      content: "";
+      height: 3px;
+      background: $color-secondary;
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 100% !important;
+    }
+  
+  &__hamburger{
+    background: transparent;
+    border: none;
+    display: none;
+    font-size: 1.5rem;
+  }
+  
+  @media screen and (max-width: '650px') {
+    &{
+      padding: 1rem 2rem;
+    }
+    &__group{
+      display: none;
+    }
+    &__hamburger{
+      display: inline-block;
+      
+    }
+    
+  }
+}
