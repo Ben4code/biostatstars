@@ -1,0 +1,46 @@
+.mainHeader{
+  background-image: linear-gradient(
+    to right bottom, 
+    rgba($color-primary, 1), 
+    rgba($color-secondary, 1));
+  height: 86vh;
+  flex-wrap: wrap;
+
+  &__content{
+    display: flex;
+    padding: 1rem 8rem;
+    justify-content: space-between;
+    align-items: center;
+
+
+    &--text{
+      font-family: 'Lato' sans-serif;
+      width: 60%;
+      color: $white;
+      margin-left: 4rem;
+      
+      & h3{
+        font-size: 5rem;
+        font-weight: 300;
+        margin-bottom: 2.5rem;
+        letter-spacing: 5px;
+      }
+      & p{
+        font-size: 1.6rem;
+        font-style: italic;
+        letter-spacing: 10px;
+        font-weight: 300;
+        margin-bottom: 2.5rem;
+      } 
+    }
+
+    &--img {
+      width: 60%;
+
+      & img{
+        width: 90%;
+      }
+    }
+  }
+
+}

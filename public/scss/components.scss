@@ -1,0 +1,44 @@
+
+
+
+.btn{
+  background-image: linear-gradient(
+    to right bottom, 
+    rgba($color-green-light, 1), 
+    rgba($color-green-dark-2, 1));
+  outline: none;
+  border: none;
+  color: $white;
+  box-shadow: 1px 1rem 6rem .5rem rgba(#000, .5);
+  cursor: pointer;
+
+  &__mainHeader{
+    padding: 2rem 6rem;
+    border-radius: 100px;
+    font-size: 1.6rem;
+    transition: all .2s ease-in;
+    text-shadow: 1px 1px 2px rgba(#000, .5);
+    text-transform: uppercase;
+
+    &:hover{
+      transform: translateY(-3px);
+      box-shadow: 1px 1rem 6rem 1.5rem rgba(#000, .5);
+    }
+
+    &:active{
+      transform: translateY(-1px);
+      box-shadow: 1px 1rem 2rem 1rem rgba(#000, .5);
+    }
+  
+  }
+
+  &__trial{
+    font-size: 1.6rem;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    width: 12rem;
+    text-shadow: 1px 1px 2px rgba(#000, .5);
+  }
+}

@@ -32,7 +32,14 @@ export default function Navbar() {
         <NextLink href="/contact">
           <a className={activeLink('/contact')}>CONTACT</a>
         </NextLink>
+        
+        {/* <NextLink href="/free-trial">
+          <a className={activeLink('/free-trial')}>FREE TRIAL</a>
+        </NextLink> */}
       </ul>
+      <button className="btn btn__trial">
+          FREE TRIAL
+        </button>
       <span onClick={() => setToggleShowNav(!toggleShowNav)} className="navbar__hamburger">
         {
           !toggleShowNav ? (<FaBars />) : (<IoClose style={{fontSize: '2.2rem'}}/>)
