@@ -32,17 +32,16 @@ export default function Navbar() {
         <NextLink href="/contact">
           <a className={activeLink('/contact')}>CONTACT</a>
         </NextLink>
-        
-        {/* <NextLink href="/free-trial">
-          <a className={activeLink('/free-trial')}>FREE TRIAL</a>
-        </NextLink> */}
+        <button className="btn btn__trial">FREE TRIAL</button>
       </ul>
-      <button className="btn btn__trial">
-          FREE TRIAL
-        </button>
-      <span onClick={() => setToggleShowNav(!toggleShowNav)} className="navbar__hamburger">
+      <div onClick={()=> setToggleShowNav(false)} className={toggleShowNav && 'navbar__overlay'}></div>
+      <span 
+        onClick={() => setToggleShowNav(!toggleShowNav)} 
+        className="navbar__hamburger"
+        style={{fontSize: '2.8rem'}}
+      >
         {
-          !toggleShowNav ? (<FaBars />) : (<IoClose style={{fontSize: '2.2rem'}}/>)
+          !toggleShowNav ? (<FaBars />) : (<IoClose/>)
         }
       </span>
     </div>
