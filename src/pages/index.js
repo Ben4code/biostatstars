@@ -1,5 +1,5 @@
-import Head from 'next/head'
-import MainHeader from '../components/Home/MainHeader'
+import Head from "next/head";
+import MainHeader from "../components/Home/MainHeader";
 
 export default function Home() {
   return (
@@ -10,10 +10,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="">
-        <MainHeader/>
-        <h2>Home</h2>
-      </main>
+      <div className="">
+        <MainHeader />
+        <div className="container">
+          <h2>Home</h2>
+        </div>
+      </div>
     </div>
-  )
+  );
 }

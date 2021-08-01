@@ -5,6 +5,7 @@
 @import "./variables.scss";
 @import "./components.scss";
 @import "./navbar.scss";
+@import "./footer.scss";
 @import "./header.scss";
 @import "./home.scss";
 
@@ -47,6 +48,11 @@ html{
   // }
 }
 
+.app{
+  display: grid;
+  grid-template-rows: auto minmax(60vh, max-content) 1fr;
+}
+
 body {
   font-size: 1.6rem;
   box-sizing: border-box;
@@ -57,4 +63,10 @@ body {
   font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
     "Helvetica Neue", sans-serif;
+}
+
+.container{
+  padding: 1rem 8rem;
+  max-width: 1920px;
+  margin: 0 auto;
 }

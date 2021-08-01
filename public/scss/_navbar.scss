@@ -1,18 +1,20 @@
-.navbar{
-  display: flex;
-  padding: 1rem 8rem;
-  justify-content: space-between;
-  align-items: center;
+.navbar {
   border-bottom: 1px solid #ddd;
 
-  &__logo{
+  .navbar__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
     width: 43.5%;
   }
 
-  &__group{
+  &__group {
     display: flex;
-    justify-content: space-evenly; 
-    align-items: center;   
+    justify-content: space-evenly;
+    align-items: center;
     width: 30%;
     margin-left: auto;
   }
@@ -22,14 +24,14 @@
     margin-right: 2rem;
     font-weight: bold;
     font-size: 1.2rem;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
     position: relative;
 
-    &:hover{
+    &:hover {
       color: $color-secondary;
     }
-  
-    &::after{
+
+    &::after {
       content: "";
       height: 3px;
       width: 0;
@@ -37,29 +39,29 @@
       position: absolute;
       bottom: -10px;
       left: 0;
-      transition: all .3s ease-in;
-    }  
+      transition: all 0.3s ease-in;
+    }
 
-    &:hover::after{
+    &:hover::after {
       width: 100%;
     }
   }
-  
-  & .active{
+
+  & .active {
     position: relative;
   }
 
   & .active::after {
-      content: "";
-      height: 3px;
-      background: $color-primary;
-      position: absolute;
-      bottom: -10px;
-      left: 0;
-      width: 100% !important;
-    }
-  
-  &__hamburger{
+    content: "";
+    height: 3px;
+    background: $color-primary;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100% !important;
+  }
+
+  &__hamburger {
     background: transparent;
     border: none;
     display: none;
@@ -67,18 +69,17 @@
     color: $color-primary;
     cursor: pointer;
   }
-  
-  @media screen and (max-width: '768px') {
-    
-    body{
+
+  @media screen and (max-width: "768px") {
+    body {
       position: relative;
-      font-size: 50%
+      font-size: 50%;
     }
-    &{
+    & {
       padding: 1rem 2rem;
     }
 
-    &__group{
+    &__group {
       background-color: $color-primary;
       position: absolute;
       left: 0;
@@ -87,47 +88,46 @@
       width: 50%;
       display: flex;
       margin-top: 0;
-      opacity: .95;
+      opacity: 0.95;
       flex-direction: column;
       transform: translateX(-500px);
-      transition: all .3s ease-in;
+      transition: all 0.3s ease-in;
       z-index: 2;
     }
 
-    &__item{
+    &__item {
       color: $white;
     }
 
-    & .active::after{
+    & .active::after {
       background: $white;
     }
 
-    &__hamburger{
-      display: inline-block; 
-      z-index: 3;     
+    &__hamburger {
+      display: inline-block;
+      z-index: 3;
     }
 
-    &__overlay{
+    &__overlay {
       background: $black;
-      opacity: .8;
+      opacity: 0.8;
       position: absolute;
       left: 0;
       top: 0;
       height: 100vh;
       width: 100%;
       z-index: 1;
-      animation: enlarge .3s ease-in;
+      animation: enlarge 0.3s ease-in;
     }
-
   }
 }
 
 @keyframes enlarge {
-  0%{
+  0% {
     transform: translateX(500px);
     opacity: 0;
   }
-  100%{
+  100% {
     transform: translateX(0);
     opacity: 1;
   }

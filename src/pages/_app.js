@@ -5,7 +5,7 @@ import Footer from '../components/layouts/Footer';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div>
+    <div className="app">
       <Navbar/>
       <Component {...pageProps} />
       <Footer/>
