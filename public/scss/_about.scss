@@ -1,0 +1,35 @@
+.about{
+  margin-top: 18rem;
+  margin-bottom: 18rem;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  &-img{
+    width: 30%;
+  }
+
+  &-content{
+    width: 60%;
+    &__heading{
+      color: $color-primary;
+      text-align: center;
+      font-family: 'Archivo Narrow', 'Lato', sans-serif;
+      letter-spacing: .8rem;
+      text-transform: uppercase;
+      margin-bottom: 3rem;
+    }
+
+    &__body{
+      p{
+        line-height: 4rem;
+      }
+      p:not(last-of-type){
+        margin-bottom: 3rem;
+      }
+    }
+  }
+
+  
+}

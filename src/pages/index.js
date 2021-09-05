@@ -1,5 +1,6 @@
 import Head from "next/head";
 import MainHeader from "../components/Home/MainHeader";
+import About from '../components/Home/About'
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
       <div className="">
         <MainHeader />
         <div className="container">
-          <h2>Home</h2>
+          <About/>
         </div>
       </div>
     </div>
