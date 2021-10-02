@@ -1,6 +1,8 @@
 import Head from "next/head";
 import MainHeader from "../components/Home/MainHeader";
 import About from '../components/Home/About'
+import TestimonialList from '../components/Home/TestimonialList'
+
 
 export default function Home() {
   return (
@@ -15,6 +17,7 @@ export default function Home() {
         <MainHeader />
         <div className="container">
           <About/>
+          <TestimonialList/>
         </div>
       </div>
     </div>
