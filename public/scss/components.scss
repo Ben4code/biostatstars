@@ -39,4 +39,32 @@
     width: 12rem;
     text-shadow: 1px 1px 2px rgba(#000, .5);
   }
+
+  &__submit{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(#000, .5);
+    font-family: "Lato", sans-serif;
+    padding: 2rem 3rem;
+    border-radius: 30px;
+    margin: 2rem 1rem;
+    text-transform: uppercase;
+    width: 25rem;
+    background-image: linear-gradient(
+      to right bottom, 
+      rgba($color-green-light, .9), 
+      rgba($color-green-dark-2, .9));
+    align-self: center;
+    transition: all .2s ease-in;
+
+    &:hover{
+      transform: translateY(-3px);
+      box-shadow: 1px 1rem 6rem 1.5rem rgba(#000, .5);
+    }
+
+    &:active{
+      transform: translateY(-1px);
+      box-shadow: 1px 1rem 2rem 1rem rgba(#000, .5);
+    }
+  }
 }

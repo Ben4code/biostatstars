@@ -1,5 +1,7 @@
 .navbar {
   border-bottom: 1px solid #ddd;
+  box-shadow: 1px 3px 10px 3px rgba(0,0,0,.25);
+  z-index: 1;
 
   .navbar__content {
     display: flex;

@@ -1,0 +1,184 @@
+.contact {
+  padding: 8rem;
+  background-image: linear-gradient(
+      45deg,
+      rgba(12, 41, 119, 0.8) 0%,
+      rgba(62, 105, 220, 0.9) 56%,
+      rgba(98, 135, 233, 0.9) 100%
+    ),
+    url("./../hijabi-with-laptop.jpg");
+  background-position: center center;
+  background-attachment: fixed;
+  width: 100%;
+  display: grid;
+  place-items: center;
+
+  &-form {
+    &__group {
+      margin-bottom: 2rem;
+      display: flex;
+      flex-direction: column;
+
+      label {
+        color: #fff;
+        padding: 1rem 3rem;
+      }
+
+      input {
+        box-shadow: 1px 3px 10px 3px rgba($color: #000000, $alpha: 0.2);
+        padding: 2rem 3rem;
+        border-radius: 100px;
+        outline: none;
+        border: none;
+        margin: 0.5rem 1rem;
+        width: 75rem;
+
+        &::placeholder {
+          font-family: "Lato", sans-serif;
+        }
+      }
+
+      textarea {
+        box-shadow: 1px 3px 10px 3px rgba($color: #000000, $alpha: 0.2);
+        padding: 2rem 3rem;
+        border-radius: 30px;
+        outline: none;
+        border: none;
+        margin: 0.5rem 1rem;
+        width: 75rem;
+
+        &::placeholder {
+          font-family: "Lato", sans-serif;
+        }
+      }
+    }
+  }
+
+  h2,
+  .allmessages h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    text-align: center;
+    display: block;
+    margin-bottom: 3rem;
+    position: relative;
+    font-family: "Archivo Narrow", "Lato", sans-serif;
+    letter-spacing: 0.8rem;
+    text-transform: uppercase;
+  }
+  h2::after {
+    content: "";
+    display: block;
+    background: #fff;
+    height: 3px;
+    width: 75%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 350%);
+  }
+
+  p {
+    text-align: center;
+    color: #fff;
+  }
+
+  .form-error {
+    border-radius: 100px;
+    color: red;
+    font-style: italic;
+    padding: 1.3rem;
+    font-size: 1.4rem;
+    background: #fff;
+    width: 40%;
+    text-align: center;
+    align-self: center;
+    animation: msgDisplay 0.5s ease forwards;
+  }
+
+  .form-success {
+    border-radius: 100px;
+    color: $color-green-dark;
+    font-style: italic;
+    padding: 1.3rem;
+    font-size: 1.4rem;
+    background: #fff;
+    width: 40%;
+    text-align: center;
+    align-self: center;
+    animation: msgDisplay 0.5s ease forwards;
+  }
+
+  @keyframes msgDisplay {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    80% {
+      transform: scale(1.1);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+}
+
+.allmessages {
+  display: flex;
+  flex-direction: column;
+  margin: 0 8rem 8rem;
+
+  h2 {
+    font-size: 2.5rem;
+    color: $color-primary;
+    text-align: center;
+    display: block;
+    margin-bottom: 3rem;
+    margin-top: 7rem;
+    position: relative;
+    font-family: "Archivo Narrow", "Lato", sans-serif;
+    letter-spacing: 0.8rem;
+    text-transform: uppercase;
+  }
+  h2::after {
+    content: "";
+    display: block;
+    background: $color-primary;
+    height: 3px;
+    width: 25%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 350%);
+  }
+
+  &-list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
+    gap: 5rem;
+  }
+
+  &-item {
+    box-shadow: 1px 3px 10px 3px rgba($color: #000000, $alpha: 0.2);
+    padding: 3rem 2rem;
+
+    h5 {
+      font-size: 1.8rem;
+      color: $color-primary;
+      text-align: center;
+      display: block;
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+      font-family: "Archivo Narrow", "Lato", sans-serif;
+      letter-spacing: 0.4rem;
+      text-transform: uppercase;
+    }
+
+    p {
+      border-bottom: 1px solid #ddd;
+    }
+  }
+}
