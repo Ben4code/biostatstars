@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import NextLink from "next/link";
 import {Link} from 'react-scroll'
 import { useRouter } from "next/router";
-import { FaBars } from "react-icons/fa";
-import { IoClose } from "react-icons/io5";
+import { FaBars } from "react-icons";
+import { IoClose } from "react-icons";
 
 export default function Navbar() {
   const router = useRouter();
