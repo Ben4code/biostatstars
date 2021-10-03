@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import { FaSpinner } from "react-icons/fa";
 
 
 export default function Contact() {
@@ -120,7 +119,7 @@ export default function Contact() {
           {errors.message && <span className="form-error">{errors.message}</span>}
         </div>
         <div className="contact-form__group">
-          <button className="btn btn__submit" type="submit"> {loading ? <FaSpinner color="white" size="23" className="fa-spin"/> : 'Send' } </button>
+          <button className="btn btn__submit" type="submit"> {loading ? <i className="fa fa-spinner fa-spin fa-2x"></i> : 'Send' } </button>
           {apiRes.state && <span className={`form-${apiRes.state}`}>{apiRes.msg}</span>}
         </div>
       </form> 

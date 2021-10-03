@@ -1,7 +1,6 @@
 import React from "react";
 import NextLink from "next/link";
 import { useRouter } from "next/router";
-import { FaFacebook, FaTwitter, FaYoutube } from "react-icons/fa";
 
 export default function Footer() {
   const router = useRouter();
@@ -49,25 +48,15 @@ export default function Footer() {
             <div className="footer__secondary--social">
               <h4>Follow Us </h4>
               <a href="/">
-                {" "}
-                <i className="">
-                  {" "}
-                  <FaTwitter />
-                </i>{" "}
+                {" "}<i className="fa fa-twitter"></i>{" "}
                 Twitter
               </a>
               <a href="/">
-                {" "}
-                <i>
-                  <FaFacebook />{" "}
-                </i>{" "}
+              {" "}<i className="fa fa-facebook"></i>{" "}
                 Facebook
               </a>
               <a href="/">
-                {" "}
-                <i className="">
-                  <FaYoutube />{" "}
-                </i>{" "}
+              {" "}<i className="fa fa-youtube"></i>{" "}
                 YouTube
               </a>
             </div>

@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import {Link} from 'react-scroll'
 import { useRouter } from "next/router";
-import { FaBars } from "react-icons/fa";
-import { IoClose } from "react-icons/io5";
 
 export default function Navbar() {
   const router = useRouter();
@@ -46,7 +44,7 @@ export default function Navbar() {
             className="navbar__hamburger"
             style={{ fontSize: "2.8rem" }}
           >
-            {!toggleShowNav ? <FaBars /> : <IoClose />}
+            {!toggleShowNav ? <i className="fa fa-bars fa-2x"></i> : <i className="fa fa-close fa-2x"></i>}
           </span>
         </div>
       </div>
