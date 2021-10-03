@@ -2,7 +2,7 @@ import React from "react";
 
 export default function MainHeader() {
   return (
-    <div className="mainHeader">
+    <section id="home" className="mainHeader">
       <div className="container">
         <div className="mainHeader__content">
           <div className="mainHeader__content--text">
@@ -17,6 +17,6 @@ export default function MainHeader() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

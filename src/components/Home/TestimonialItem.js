@@ -7,7 +7,7 @@ export default function TestimonialItem({imgPath, altText, quote, school, name, 
         <img src={imgPath} alt={altText} />
       </div>
       <div className="testimonialItem-content">
-        <quote>{quote}</quote>
+        <blockquote>{quote}</blockquote>
         <h3>{name}</h3>
         <span>{occupation} - {school}</span>
       </div>

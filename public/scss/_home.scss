@@ -5,6 +5,8 @@
     rgba($color-secondary, 1));
   height: 86vh;
   flex-wrap: wrap;
+  margin-top: 12vh;
+
 
   &__content{
     display: flex;
@@ -41,4 +43,11 @@
     }
   }
 
+}
+
+@media screen and (max-width: "768px") {
+  .mainHeader{
+    margin-top: 20vh;
+    background-color: red;
+  }
 }

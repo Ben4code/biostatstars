@@ -3,7 +3,7 @@ import TestimonialItem from './TestimonialItem'
 
 export default function TestimonialList() {
   return (
-    <section className="testimonialList">
+    <section id="testimonials" className="testimonialList">
       <h2>Testimonials</h2>
       <p>What some of our users have to say about us</p>
       <div className="testimonialList-content">

@@ -1,7 +1,10 @@
 import React, {useState} from "react";
+import { FaSpinner } from "react-icons/fa";
+
 
 export default function Contact() {
   const [formState, setFormState] = useState({name: '', email: '', message: ''})
+  const [loading, setLoading] = useState(false)
   const [apiRes, setAPIRes] = useState({state: false, msg: ''})
   const [errors, setErrors] = useState({name: false, email: false, message: false})
 
@@ -12,6 +15,7 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    setLoading(true)
     setAPIRes({ state: false, msg: false })
     const {name, email, message} = formState
     if(name.trim() === '' || email.trim() === '' || message.trim() === ''){
@@ -21,6 +25,7 @@ export default function Contact() {
         email: email.trim() === '' && 'Email field can not be empty',
         message: message.trim() === '' && 'Message field can not be empty',
       })
+      setLoading(false)
       return
     }
 
@@ -29,15 +34,18 @@ export default function Contact() {
         ...errors,
         email: 'Kindly enter a valid email address',
       })
+      setLoading(false)
       return
     }
 
     if(message.length < 3){
       setErrors({message: 'Message text is too short'})
+      setLoading(false)
       return
     }
+    
     setErrors({name: false, email: false, message: false})
-    const res = await fetch('/api/hello', {
+    const res = await fetch('/api/email', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -45,20 +53,32 @@ export default function Contact() {
       body: JSON.stringify(formState),
     })
 
-    if(await res.ok){
-      setErrors({
-        name: false, email: false, message: false
-      })
-      setFormState({
-        name: '', email: '', message: ''
-      })
-      const {msg} = await res.json()
-      setAPIRes({state: true, msg })
+    try {
+      if(await res.status === 200){
+        setErrors({
+          name: false, email: false, message: false
+        })
+        setFormState({
+          name: '', email: '', message: ''
+        })
+        const {msg} = await res.json()
+        setAPIRes({state: 'success', msg })
+        setLoading(false)
+        return
+      }
+      setLoading(false)
+      return setAPIRes({state: 'error', msg: "Something Went wrong! Try again"})
+    } catch (error) {
+      console.log(error)
+      console.log("throw error")
+      return
     }
+
+    
   }
 
   return (
-    <div className="contact">
+    <section id="contact" className="contact">
       <div>
         <h2>Contact</h2>
         <p>Drop us a message.</p>
@@ -100,10 +120,10 @@ export default function Contact() {
           {errors.message && <span className="form-error">{errors.message}</span>}
         </div>
         <div className="contact-form__group">
-          <button className="btn btn__submit" type="submit">Send </button>
-          {apiRes.state && <span className="form-success">{apiRes.msg}</span>}
+          <button className="btn btn__submit" type="submit"> {loading ? <FaSpinner color="white" size="23" className="fa-spin"/> : 'Send' } </button>
+          {apiRes.state && <span className={`form-${apiRes.state}`}>{apiRes.msg}</span>}
         </div>
       </form> 
-    </div>
+    </section>
   );
 }

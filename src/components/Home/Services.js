@@ -3,7 +3,7 @@ import {PuzzleIcon, CertificateIcon, ElearningIcon, GrowthIcon} from '../icons'
 
 export default function Services() {
   return (
-    <section className="services">
+    <section id="services" className="services">
       <h2>Services</h2>
       <div className="container">
         <div className="services-content">

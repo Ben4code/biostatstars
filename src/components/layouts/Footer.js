@@ -14,7 +14,7 @@ export default function Footer() {
       <div className="footer__secondary">
         <div className="container">
           <div className="footer__secondary-content">
-            <div>
+            <div className="footer__secondary-first">
               <a href="/">
                 <img
                   src="logo.png"

@@ -2,7 +2,7 @@ import React from "react";
 
 export default function About() {
   return (
-    <section className="about">
+    <section id="about" className="about">
       <div className="about-img">
         <img src="lady1.png" alt="about bss" />
       </div>
