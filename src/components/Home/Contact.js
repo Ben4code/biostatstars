@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { FaSpinner } from "react-icons";
+import { FaSpinner } from "react-icons/fa";
 
 
 export default function Contact() {

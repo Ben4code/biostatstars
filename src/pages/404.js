@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function services() {
+export default function NotFoundPage() {
   return (
     <div>
-      <h2>Services</h2>
+      Page Not Found
     </div>
   )
 }
